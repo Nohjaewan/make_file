@@ -1,13 +1,15 @@
 import os
 import json
 from shutil import copyfile
-
+#1111
 def normalize_coordinates(x, y, image_width, image_height):
     normalized_x = x / image_width
     normalized_y = y / image_height
     #print(x,y,normalized_x,normalized_y)
     return normalized_x, normalized_y
-
+def test(a):
+    a=a*a
+    return a
 def normalize_polygon_coordinates(polygon, image_width, image_height):
     normalized_polygon = [normalize_coordinates(polygon[i], polygon[i+1], image_width, image_height) for i in range(0, len(polygon), 2)]
     flattened_normalized_polygon = [coord for pair in normalized_polygon for coord in pair]
